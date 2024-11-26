@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mon PortFolio</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header> <!--Navbar-->
+            <a href="portfolio.html"><img class="avatar" src="images/avatar.jpg" alt="Avatar"></a>
+            <h1>Mon Portfolio</h1>
+            <div class="dropdown"> <!--Menu déroulant de la navbar-->
+                <button class="menu">Menu</button>
+                <div class="menu-content">
+                    <a href="#presentation">Ma présentation</a>
+                    <a href="#mesvoyages">Mes voyages</a>
+                    <a href="#idees">Vos suggestions</a>
+                    <a href="page2.html">Mes recommandations</a>
+                </div>
+            </div>
+        </header>
+        <main> <!--Présentation-->
+            <section id="presentation" class="partie1">
+                <h2>Présentation</h2>
+                <article> <!--Image du personnage + courte présentation-->
+                    <img class="personnage" src="images/personnage.webp">
+                    <p class="presentation">Moi c'est Kévin, j'ai 22 ans, j'aimerai pouvoir développer une activité entrepreunariale dans le développement d'applications numériques. Mon plus grand rêve est de faire un road-trip aux Etats-Unis en van aménagé. J'ai déjà visité plusieurs pays comme l'Angleterre, l'Espagne ou encore le Danemark.</p>
+                </article>
+            </section>
+            <div class="recommandations"> <!--Bouton vers les recommandations(page2)-->
+                <button class="bouton-recommandations">
+                    <h3><a href="page2.html">Mes recommandations</a></h3>
+                </button>
+            </div>
+            <hr>
+            <section id="mesvoyages"> 
+                <h2>Mes voyages</h2>
+                <div class="mesvoyages"> <!--Partie "Voyages", avec un titre(villevisité + pays), une photo et liste descriptive-->
+                    <div class="voyage">
+                        <h3><ins>Copenhague, Danemark 🇩🇰 </ins></h3>
+                        <img class="photo" src="images/copenhague.jpeg" style="width:100%">
+                        <ul>
+                            <li><b>Pays :</b> Danemark</li>
+                            <li><b>Population :</b> 653 648 habitants (2023)</li>
+                            <li><b>Superficie :</b> 8825 hectares</li>
+                            <li><b>Monnaie :</b> la Couronne Dannoise</li>
+                            <li><b>Lieux importants :</b> Jardin de Tivoli, Statue de la petite sirène, le port de Nyhavn</li>
+                        </ul>
+                    </div>
+                    <div class="voyage">
+                        <h3><ins>Barcelone, Espagne 🇪🇸 </ins></h3>
+                        <img class="photo" src="images/barcelona_2.jpg" alt="barcelone">
+                        <ul>
+                            <li><b>Pays :</b> Espagne</li>
+                            <li><b>Population :</b> 1 660 122 habitants (2023)</li>
+                            <li><b>Superficie :</b> 10 130 hectares</li>
+                            <li><b>Monnaie :</b> l'euro</li>
+                            <li><b>Lieux importants :</b> la Sagrada Familia, le Parc Guëll, le stade du Camp Nou</li>
+                        </ul>
+                    </div>
+                    <div class="voyage">
+                        <h3><ins>Londres, Angleterre 🇬🇧 </ins></h3>
+                        <img class="photo" src="images/londres.jpeg" alt="londres">
+                        <ul>
+                            <li><b>Pays :</b> Angleterre</li>
+                            <li><b>Population :</b> 8 799 728 habitants (2021)</li>
+                            <li><b>Superficie :</b> 5 598 hectares</li>
+                            <li><b>Monnaie :</b> le Livre Sterling</li>
+                            <li><b>Lieux importants :</b> Big Ben, Buckingham Palace, Tower Bridge</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section id="idees">
+                <h2>Vos suggestions</h2>
+                <div class="formulaire"> <!--Formulaire-->
+                    <form action="#" method="get">
+                        <fieldset class="formulaire-content">
+                            <legend>Vos idées de voyage</legend>
+                            <label for="date">Date</label>
+                            <input type="date">
+                            <label for="prenom">Prénom</label>
+                            <input type="text">
+                            <label for="nom">Nom</label>
+                            <input type="text">
+                            <label for="lieu">Lieu de destination</label>
+                            <input type="text">
+                            <label for="experience">As-tu déjà visité ce lieu ? </label>
+                            <div class="form-radio">
+                                <input type="radio" name="fav_destination" value="OUI" class="rep-radio">
+                                <label for="oui"> Oui</label>
+                                <input type="radio" name="fav_destination" value="NON" class="rep-radio">
+                                <label for="non"> Non</label>
+                            </div>
+                            <div class="form-buttons">
+                                <input type="reset" class="effacer">
+                                <input type="submit" class="envoyer">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+            <hr>
+        </main>
+        <footer> <!--footer-->
+            <div class="footer-content"> 
+                <h3>Créé par Kévin</h3>
+                <p>📞 06 06 06 06 06</p>
+                <p>📧 supportclient@contact.com</p>
+                <p class="copyright">Company Name © 2024</p>
+                <div class="reseaux-sociaux"> <!--Liens réseaux sociaux-->
+                    <a href="https://www.instagram.com/"><img src="images/insta.jpeg" class="logo-rs"></a>
+                    <a href="https://www.facebook.com/"><img src="images/facebook.jpeg" class="logo-rs"></a>
+                    <a href="https://x.com/"><img src="images/tweeter.png" class="logo-rs"></a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

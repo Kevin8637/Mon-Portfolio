@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    box-sizing:border-box
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background-color: #F7F6CF !important;
+    font-family: "Sour Gummy", sans-serif !important;
+    font-size: 20px !important;
+}
+
+.partie1 {
+    padding-top: 150px;
+}
+
+header {
+    position: fixed;
+    width : 100%;
+    background-color: #9AC8EB;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.2);
+}
+
+.avatar {
+    border-radius : 50%;
+    width : 80px;
+    height : 80px;
+    display: flex;
+    box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.2);
+    transition: transform 250ms;
+}
+
+.avatar:hover {
+    transform: translateY(-10px);
+  }
+
+h1 {
+    font-size: 3.5em;
+    color: orange;
+}
+
+.menu {
+    background-color: #5784BA;
+    color: white;
+    margin : 15px;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 7%;
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown {
+    position:relative;
+    display: inline-block;
+}
+
+.menu-content {
+    display: none;
+    position: static;
+    background-color: #F4CFDF;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.menu-content a:hover {
+    background-color: #B6D8F2;
+}
+
+.menu-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+}
+
+.dropdown:hover .menu-content {
+    display:block;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    font-size: 2.5em;
+    text-decoration: underline;
+    text-align: center;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personnage {
+    width : 200px;
+    height : 250px;
+    margin : 20px;
+    border-radius: 7%;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+.presentation {
+    margin: 20px;
+    width: 50%;
+    font-size: 1.2em;
+}
+
+hr {
+    margin: 20px 50px 20px 50px;
+}
+
+.mesvoyages {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    margin-bottom: 50px;
+}
+
+.voyage {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: #B6D8F2;
+    border-radius: 10%;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
+    transition: transform 250ms;
+}
+
+.voyage:hover {
+    transform: scale(1.1,1.1)
+}
+
+.photo {
+    width : 300px;
+    height : 200px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 13%;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.formulaire {
+    width: 30%;
+    margin: auto;
+}
+
+.formulaire-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4CFDF;
+    border-radius: 7%;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
+}
+
+.form-radio {
+    display: flex;
+    flex-direction: row;
+}
+
+.rep-radio {
+    margin: 3px;
+}
+
+.form-buttons {
+    display: flex;
+    margin: 5px;
+}
+
+.effacer,
+.envoyer {
+    margin: 4px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bouton-recommandations {
+    background-color: #F4CFDF;
+    height : 40px;
+    width : 200px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+    transition: transform 250ms;
+}
+
+.bouton-recommandations:hover{
+    transform: translateY(-10px);
+}
+
+.recommandations {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+    background-color: #B6D8F2;
+}
+
+td, th {
+    border : 1px solid black;
+    text-align: center;
+}
+
+th {
+    background-color: #66b4f0;
+}
+
+.logo-rs {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    transition: transform 250ms;
+}
+
+.logo-rs:hover{
+    transform: scale(1.1,1.1);
+}
+
+.retour-accueil {
+    width: 40px;
+    height: 40px;
+    margin-left: 80px;
+    margin-top: 20px;
+    transition: transform 250ms;
+}
+
+.retour-accueil:hover {
+    transform: scale(1.1,1.1);
+}
+
+@media (max-width: 576px) {
+    header{
+        width: 100%;
+    }
+
+    h1 {
+    font-size: 2em;
+    }
+
+    .mesvoyages{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .voyage {
+        width: 70%;
+        margin: 20px;
+    }
+
+    .formulaire {
+        width: 70%;
+    }
+
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .retour-accueil{
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}

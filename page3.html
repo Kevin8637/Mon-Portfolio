@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mon PortFolio</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header> <!--Navbar-->
+            <a href="portfolio.html"><img class="avatar" src="images/avatar.jpg" alt="Avatar"></a>
+            <h1>Mon Portfolio</h1>
+            <div class="dropdown"> <!--Menu déroulant de la navbar-->
+                <button class="menu">Menu</button>
+                <div class="menu-content">
+                    <a href="#presentation">Ma présentation</a>
+                    <a href="#mesvoyages">Mes voyages</a>
+                    <a href="#idees">Vos suggestions</a>
+                    <a href="page2.html">Mes recommandations</a>
+                    <a href="page3.html">Test librairies</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="presentation" class="partie1">
+                <h2>Photos de mes voyages</h2>
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 3</div>
+                      <img class="photo" src="images/barcelona_2.jpg" style="width:100%">
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 3</div>
+                      <img src="images/copenhague.jpeg" style="width:100%">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                    </div>
+                    
+                    <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      let i;
+                      let slides = document.getElementsByClassName("mySlides");
+                      let dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                    }
+                    </script>
+            </section>
+        </main>
+    </body>
+    <footer>
+        <div class="footer-content"> 
+            <h3>Créé par Kévin</h3>
+            <p>📞 06 06 06 06 06</p>
+            <p>📧 supportclient@contact.com</p>
+            <p class="copyright">Company Name © 2024</p>
+            <div class="reseaux-sociaux"> <!--Liens réseaux sociaux-->
+                <a href="https://www.instagram.com/"><img src="images/insta.jpeg" class="logo-rs"></a>
+                <a href="https://www.facebook.com/"><img src="images/facebook.jpeg" class="logo-rs"></a>
+                <a href="https://x.com/"><img src="images/tweeter.png" class="logo-rs"></a>
+            </div>
+        </div>
+    </footer>
+</html>
